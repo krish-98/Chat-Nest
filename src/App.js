@@ -1,8 +1,17 @@
+import { Routes, Route } from "react-router-dom"
+import Home from "./Pages/Home"
+import Login from "./Pages/Login"
+import Register from "./Pages/Register"
+
 function App() {
   return (
-    <div className="text-3xl animate-pulse">
-      <h1>Hello Murali Krishnan</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route index path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>
+    </>
   )
 }
 
