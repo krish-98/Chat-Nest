@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Google from "../Assets/google.png"
 import Gallery from "../Assets/gallery.png"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 // firebase functions
 import { auth, db, storage } from "../firebase.config"
@@ -17,6 +17,8 @@ const Register = () => {
   })
   const [img, setImg] = useState(null)
   const [error, setError] = useState(false)
+
+  const navigate = useNavigate()
 
   const changeHandler = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value })
@@ -61,6 +63,8 @@ const Register = () => {
                 })
 
                 await setDoc(doc(db, "userChats", res.user.uid), {})
+
+                navigate("/")
               })
               .catch((err) => console.log(err))
           }
