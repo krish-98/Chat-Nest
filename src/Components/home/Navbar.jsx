@@ -1,5 +1,6 @@
 import React from "react"
 import Profile from "../../Assets/user.jpg"
+
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-4 py-4 bg-purple-500">

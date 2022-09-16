@@ -4,7 +4,7 @@ import User2 from "../../Assets/user2.jpg"
 const Chats = () => {
   return (
     <div className="bg-purple-700 h-full">
-      <div className="flex items-center gap-2 py-3 px-1 hover:bg-purple-400 cursor-pointer">
+      <div className="flex items-center gap-2 py-3 px-3 hover:bg-purple-400 cursor-pointer">
         <img
           className="w-10 h-10 object-cover rounded-full cursor-pointer"
           src={User2}
@@ -16,7 +16,7 @@ const Chats = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 py-3 px-1 hover:bg-purple-400 cursor-pointer">
+      <div className="flex items-center gap-2 py-3 px-3 hover:bg-purple-400 cursor-pointer">
         <img
           className="w-10 h-10 object-cover rounded-full cursor-pointer"
           src={User2}
@@ -28,7 +28,7 @@ const Chats = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 py-3 px-1 hover:bg-purple-400 cursor-pointer">
+      <div className="flex items-center gap-2 py-3 px-3 hover:bg-purple-400 cursor-pointer">
         <img
           className="w-10 h-10 object-cover rounded-full cursor-pointer"
           src={User2}
@@ -40,7 +40,7 @@ const Chats = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 py-3 px-1 hover:bg-purple-400 cursor-pointer">
+      <div className="flex items-center gap-2 py-3 px-3 hover:bg-purple-400 cursor-pointer">
         <img
           className="w-10 h-10 object-cover rounded-full cursor-pointer"
           src={User2}
@@ -52,7 +52,7 @@ const Chats = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 py-3 px-1 hover:bg-purple-400 cursor-pointer">
+      <div className="flex items-center gap-2 py-3 px-3 hover:bg-purple-400 cursor-pointer">
         <img
           className="w-10 h-10 object-cover rounded-full cursor-pointer"
           src={User2}
@@ -64,7 +64,7 @@ const Chats = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 py-3 px-1 hover:bg-purple-400 cursor-pointer">
+      <div className="flex items-center gap-2 py-3 px-3 hover:bg-purple-400 cursor-pointer">
         <img
           className="w-10 h-10 object-cover rounded-full cursor-pointer"
           src={User2}
