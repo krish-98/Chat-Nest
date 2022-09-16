@@ -1,6 +1,7 @@
 import React from "react"
-import Attach from "../../Assets/attach.png"
-import Img from "../../Assets/img.png"
+import { IoDocumentAttachOutline } from "react-icons/io5"
+import { RiImageAddFill } from "react-icons/ri"
+import { FiSend } from "react-icons/fi"
 
 const InputField = () => {
   return (
@@ -11,19 +12,16 @@ const InputField = () => {
         placeholder="Type something..."
       />
 
-      <div className="flex items-center gap-2 ">
-        <img
-          className="w-7 h-7 cursor-pointer"
-          src={Attach}
-          alt="attach something"
-        />
+      <div className="flex items-center gap-4 mr-1">
+        <IoDocumentAttachOutline className="w-6 h-6 cursor-pointer" />
         <input className="hidden" type="file" id="image" accept="image/*" />
         <label htmlFor="image">
-          <img className="w-7 h-7 cursor-pointer" src={Img} alt="send images" />
+          <RiImageAddFill className="w-6 h-6 cursor-pointer" />
         </label>
 
-        <button className="font-semibold bg-white text-purple-400 px-4 py-1 outline-none border-none">
+        <button className="flex items-center gap-1 font-semibold text-white bg-purple-400 px-3 py-1 outline-none border-none">
           Send
+          <FiSend />
         </button>
       </div>
     </div>

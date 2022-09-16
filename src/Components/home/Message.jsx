@@ -27,7 +27,10 @@ const Message = () => {
               : "rounded-tr-lg rounded-br-lg rounded-bl-lg"
           }`}
         >
-          Hello!
+          Hello! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit
+          voluptas neque officiis debitis vero expedita quasi numquam minus ipsa
+          officia eum quo adipisci quia, dicta sit repudiandae! Perspiciatis,
+          quidem magnam?
         </p>
         <img className="w-[50%] " src={User} alt="" />
       </div>

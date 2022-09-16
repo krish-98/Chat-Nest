@@ -1,7 +1,7 @@
 import React from "react"
-import Add from "../../Assets/add.png"
-import Cam from "../../Assets/cam.png"
-import More from "../../Assets/more.png"
+import { FaUserPlus } from "react-icons/fa"
+import { IoVideocam } from "react-icons/io5"
+import { MdMoreHoriz } from "react-icons/md"
 
 import Messages from "./Messages"
 import InputField from "./InputField"
@@ -11,10 +11,11 @@ const Chat = () => {
     <div className="flex-2">
       <div className="flex items-center justify-between p-5 bg-purple-400">
         <h3 className="text-xl font-semi-bold text-white">Tyler</h3>
-        <div className="flex items-center gap-1">
-          <img className="w-8 cursor-pointer" src={Add} alt="Add friends" />
-          <img className="w-8 cursor-pointer" src={Cam} alt="Video chat" />
-          <img className="w-8 cursor-pointer" src={More} alt="To know more" />
+
+        <div className="flex items-center gap-2">
+          <FaUserPlus className="w-6 h-6 cursor-pointer" />
+          <IoVideocam className="w-6 h-6 cursor-pointer" />
+          <MdMoreHoriz className="w-6 h-6 cursor-pointer" />
         </div>
       </div>
 
