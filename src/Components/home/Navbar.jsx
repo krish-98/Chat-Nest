@@ -2,6 +2,9 @@ import React from "react"
 import Profile from "../../Assets/user.jpg"
 import { MdLogout } from "react-icons/md"
 
+import { signOut } from "firebase/auth"
+import { auth } from "../../firebase.config"
+
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-4 py-4 bg-purple-500">
@@ -16,7 +19,10 @@ const Navbar = () => {
           alt="profile icon"
         />
         <p className="text-xl font-medium tracking-wide">Kelly</p>
-        <MdLogout className="w-5 h-5 cursor-pointer" />
+        <MdLogout
+          onClick={() => signOut(auth)}
+          className="w-5 h-5 cursor-pointer"
+        />
       </div>
     </nav>
   )
