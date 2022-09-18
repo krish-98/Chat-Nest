@@ -4,6 +4,8 @@ import User from "../../Assets/user.jpg"
 const Message = () => {
   let owner = false
 
+  console.count("Component re-rendered")
+
   return (
     <div
       className={`flex items-center gap-2 py-3 px-2 ${
