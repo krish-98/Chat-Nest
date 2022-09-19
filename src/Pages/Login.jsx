@@ -1,13 +1,16 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Google from "../Assets/google.png"
 
 import { auth } from "../firebase.config"
-import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth"
+import { signInWithEmailAndPassword } from "firebase/auth"
 
 const Login = () => {
   const [values, setValues] = useState({ email: null, password: null })
   const [error, setError] = useState(false)
+  const [errMsg, setErrMsg] = useState(null)
+
+  const navigate = useNavigate()
 
   const changeHandler = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value })
@@ -15,28 +18,39 @@ const Login = () => {
 
   const login = async (e) => {
     e.preventDefault()
-    try {
-      const userCredential = await signInWithEmailAndPassword(
-        auth,
-        values.email,
-        values.password
-      )
-      const user = userCredential.user
-      console.log(user)
-    } catch (err) {
+
+    const { email, password } = values
+
+    if (!email || !password) {
       setError(true)
-      console.log(err.message)
+      setTimeout(() => {
+        setError(false)
+      }, 3000)
+    } else {
+      try {
+        const userCredential = await signInWithEmailAndPassword(
+          auth,
+          email,
+          password
+        )
+        const user = userCredential.user
+        console.log(user)
+        navigate("/")
+      } catch (err) {
+        setErrMsg(err.message)
+        setTimeout(() => {
+          setErrMsg(null)
+        }, 3000)
+        console.log(err.message)
+      }
     }
   }
-
-  // onAuthStateChanged(auth, (user1) => {
-  //   console.log(user1)
-  // })
 
   return (
     <div className="flex justify-center items-center h-screen bg-purple-400">
       <div className="flex flex-col items-center gap-6 bg-white py-9 px-9 rounded-xl md:px-20">
-        {error && <p>Error occured!</p>}
+        {error && <p>Required fields can't be empty!</p>}
+        {errMsg && <p>{errMsg}</p>}
         <div className="flex items-center justify-center gap-3 border border-gray-200 py-3 px-4 rounded-lg ring-1 cursor-pointer w-72">
           <img
             className="w-6 h-6 object-contain"
