@@ -5,10 +5,8 @@ import Home from "./Pages/Home"
 import Login from "./Pages/Login"
 import Register from "./Pages/Register"
 
-function App(props) {
+function App() {
   const { currentUser } = useContext(AuthContext)
-
-  console.log(currentUser)
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
