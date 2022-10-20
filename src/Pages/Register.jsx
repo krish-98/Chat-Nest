@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import Google from "../Assets/google.png"
 import Gallery from "../Assets/gallery.png"
 import { Link, useNavigate } from "react-router-dom"
 
@@ -76,22 +75,15 @@ const Register = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-purple-400">
-      <div className="flex flex-col items-center gap-6 bg-white py-9 px-9 rounded-xl md:px-20">
+    <div className="flex justify-center items-center h-screen bg-background">
+      <div className="flex flex-col items-center gap-6 bg-white w-full mx-8 px-8 py-6 rounded-xl md:w-1/2 md:max-w-[420px]">
         {error && <p>Requireds fields can't be empty!</p>}
-        {JSON.stringify({ values, img })}
-        <div className="flex items-center justify-center gap-3 border border-gray-200 py-3 px-4 rounded-lg ring-1 cursor-pointer w-72">
-          <img
-            className="w-6 h-6 object-contain"
-            src={Google}
-            alt="Login with Google"
-          />
-          <p className="font-bold">Sign up with Google</p>
-        </div>
 
-        <p>OR</p>
+        <h1 className="text-3xl uppercase font-bold tracking-wide text-text mb-8">
+          Chat Nest
+        </h1>
 
-        <form onSubmit={Register} className="flex flex-col ic w-full">
+        <form onSubmit={Register} className="flex flex-col w-full">
           <label className="text-sm" htmlFor="name">
             Name
           </label>
@@ -100,6 +92,7 @@ const Register = () => {
             type="text"
             id="name"
             name="name"
+            placeholder="username"
             onChange={changeHandler}
             values={values.email}
           />
@@ -113,6 +106,7 @@ const Register = () => {
             type="email"
             id="email"
             name="email"
+            placeholder="example@mail.com"
             onChange={changeHandler}
             values={values.email}
           />
@@ -126,6 +120,7 @@ const Register = () => {
             type="password"
             id="password"
             name="password"
+            placeholder="********"
             onChange={changeHandler}
             values={values.password}
           />
@@ -147,16 +142,16 @@ const Register = () => {
           />
 
           <button
-            className="text-white font-semibold py-2 mt-6 bg-purple-500 rounded-md hover:bg-purple-400"
+            className="text-white font-semibold py-2 mt-6 bg-text rounded-md hover:hover:bg-layer"
             type="submit"
           >
-            Sign Up
+            Create account
           </button>
         </form>
 
         <div className="flex items-center gap-2 text-sm">
           <p className="">Already have an accocunt?</p>
-          <Link to="/login" className="underline text-purple-500">
+          <Link to="/login" className="underline text-text">
             Login
           </Link>
         </div>
