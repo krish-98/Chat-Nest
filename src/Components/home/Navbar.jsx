@@ -9,7 +9,7 @@ const Navbar = () => {
   const { currentUser } = useContext(AuthContext)
 
   return (
-    <nav className="flex items-center justify-between px-4 py-4 bg-purple-500">
+    <nav className="flex items-center justify-between px-4 py-4">
       <h2 className="text-2xl font-bold text-white tracking-wider">
         Chat Nest
       </h2>

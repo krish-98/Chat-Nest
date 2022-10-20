@@ -12,7 +12,7 @@ const Chat = () => {
 
   return (
     <div className="flex-2">
-      <div className="flex items-center justify-between p-5 bg-purple-400">
+      <div className="flex items-center justify-between p-5 bg-text h-[72px]">
         <h3 className="text-xl font-semi-bold text-white">
           {data.user?.displayName}
         </h3>

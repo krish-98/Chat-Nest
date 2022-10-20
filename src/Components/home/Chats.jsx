@@ -28,14 +28,14 @@ const Chats = () => {
   }
 
   return (
-    <div className="bg-purple-700 h-full">
+    <div className="h-full">
       {Object.entries(chats)
         ?.sort((a, b) => b[1].date - a[1].date)
         .map((chat) => (
           <div
             key={chat[0]}
             onClick={() => handleSelect(chat[1].userInfo)}
-            className="flex items-center gap-2 py-3 px-3 hover:bg-purple-400 cursor-pointer"
+            className="flex items-center gap-2 py-3 px-3 hover:bg-layer cursor-pointer"
           >
             <img
               className="w-10 h-10 object-cover rounded-full cursor-pointer"

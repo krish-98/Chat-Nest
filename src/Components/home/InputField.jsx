@@ -102,7 +102,7 @@ const InputField = () => {
 
         <button
           onClick={handleSend}
-          className="flex items-center gap-1 font-semibold text-white bg-purple-400 px-3 py-1 outline-none border-none"
+          className="flex items-center gap-1 font-semibold text-white bg-layer px-3 py-1 outline-none border-none"
         >
           Send
           <FiSend />

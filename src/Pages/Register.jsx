@@ -75,7 +75,7 @@ const Register = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen bg-background">
+    <div className="flex justify-center items-center h-screen bg-[#251B37]">
       <div className="flex flex-col items-center gap-6 bg-white w-full mx-8 px-8 py-6 rounded-xl md:w-1/2 md:max-w-[420px]">
         {error && <p>Requireds fields can't be empty!</p>}
 

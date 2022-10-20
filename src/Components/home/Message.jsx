@@ -1,5 +1,4 @@
-import React, { useContext, useState } from "react"
-import User from "../../Assets/user.jpg"
+import React, { useContext, useRef, useEffect } from "react"
 import { AuthContext } from "../../context/AuthContext"
 import { ChatContext } from "../../context/ChatContext"
 
@@ -7,13 +6,16 @@ const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext)
   const { data } = useContext(ChatContext)
 
-  let owner = false
+  const ref = useRef()
 
-  console.log(message)
+  // useEffect(() => {
+  //   ref.current?.scrollIntoView({ behavior: "smooth" })
+  // }, [message])
 
   return (
     <div
-      className={`flex  flex-row items-center gap-2 py-3 px-2 ${
+      ref={ref}
+      className={`flex flex-row items-center gap-2 py-3 px-2 ${
         message.senderId === currentUser.uid && "flex-row-reverse"
       }`}
     >

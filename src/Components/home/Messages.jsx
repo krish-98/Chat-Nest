@@ -19,7 +19,7 @@ const Messages = () => {
   }, [data.chatId])
 
   return (
-    <div className="h-[calc(100%-124px)] bg-purple-200 overflow-auto scroll scrollbar-thin scrollbar-thumb-purple-300 scrollbar-track-white ">
+    <div className="h-[calc(100%-124px)] bg-[#FFCACA] overflow-auto scroll scrollbar-thin scrollbar-thumb-layer scrollbar-track-[#FFCACA]">
       {messages.map((m) => (
         <Message message={m} key={m.id} />
       ))}

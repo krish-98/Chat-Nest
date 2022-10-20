@@ -84,14 +84,14 @@ const Search = () => {
 
   return (
     <div>
-      <div className="flex items-center bg-purple-700 text-white py-1">
+      <div className="flex items-center bg-layer text-white py-1 ">
         <span className="pl-2">
           <BsSearch />
         </span>
         <input
           onChange={(e) => setUsername(e.target.value)}
           onKeyDown={handleKey}
-          className="w-full outline-none border-none px-3 bg-purple-700 py-2 text-lg placeholder:text-gray-200"
+          className="w-full outline-none border-none px-3 bg-layer py-2 text-lg placeholder:text-white"
           type="text"
           value={username}
           placeholder="Find a user"
@@ -101,7 +101,7 @@ const Search = () => {
       {user && (
         <div
           onClick={handleSelect}
-          className="flex items-center gap-2 py-3 px-3 bg-purple-500 hover:bg-purple-700 cursor-pointer border-b"
+          className="flex items-center gap-2 py-3 px-3 bg-text hover:bg-layer cursor-pointer border-b"
         >
           <img
             className="w-10 h-10 object-cover rounded-full cursor-pointer"

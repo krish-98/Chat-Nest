@@ -4,8 +4,8 @@ import Chat from "../Components/home/Chat"
 
 const Home = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-[#181818]">
-      <div className="flex w-[65%] h-[80%] rounded-lg overflow-hidden">
+    <div className="flex items-center justify-center h-screen bg-[#251B37]">
+      <div className="flex w-[65%] h-[80%] rounded-lg overflow-hidden bg-text">
         <Sidebar />
         <Chat />
       </div>
